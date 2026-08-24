@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Senhas</title>
+    <!-- Conecta com o arquivo de visual azul -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Caixa moderna do gerador -->
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+        
+        <!-- Campo que exibe a senha gerada -->
+        <input type="text" id="campo-senha" readonly>
+        
+        <!-- NOVO: Caixas de seleção para os tipos de caracteres -->
+        <div class="opcoes-caracteres" style="text-align: left; margin: 20px auto; width: 80%; display: flex; flex-direction: column; gap: 8px;">
+            <label><input type="checkbox" id="chk-maiusculas" checked> Letras Maiúsculas</label>
+            <label><input type="checkbox" id="chk-minusculas" checked> Letras Minúsculas</label>
+            <label><input type="checkbox" id="chk-numeros" checked> Números</label>
+            <label><input type="checkbox" id="chk-simbolos" checked> Símbolos</label>
+        </div>
+        
+        <!-- Controles para aumentar e diminuir o tamanho -->
+        <div class="controles">
+            <button class="btn-ajuste" onclick="diminuiTamanho()">-</button>
+            <span id="numero-senha">8</span>
+            <button class="btn-ajuste" onclick="aumentaTamanho()">+</button>
+        </div>
+        
+        <!-- Botão para acionar a função geraSenha() do JavaScript -->
+        <button class="btn-gerar" onclick="geraSenha()">Gerar nova senha</button>
+    </div>
+    
+    <!-- Conecta com o seu arquivo main.js corrigido -->
+    <script src="main.js"></script>
+</body>
+</html>
