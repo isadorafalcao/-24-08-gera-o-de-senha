@@ -1,23 +1,30 @@
-
 /* Configuração geral do fundo da página */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f172a; /* Azul escuro moderno */
-    color: #f8fafc;
+    background-color: #fce7f3; /* Rosa bebê */
+    color: #831843;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
+
+    /* Estrelinhas amarelas no fundo da página */
+    background-image:
+        radial-gradient(circle, #facc15 2px, transparent 3px),
+        radial-gradient(circle, #facc15 2px, transparent 3px),
+        radial-gradient(circle, #facc15 2px, transparent 3px);
+    background-size: 50px 50px, 70px 70px, 90px 90px;
+    background-position: 10px 20px, 40px 50px, 80px 10px;
 }
 
 /* Caixa principal do gerador */
 .container {
-    background-color: #1e293b; /* Azul intermediário */
+    background-color: #f9a8d4; /* Rosa médio */
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(190, 24, 93, 0.3);
     text-align: center;
     width: 320px;
 }
@@ -25,7 +32,7 @@ body {
 h1 {
     font-size: 24px;
     margin-bottom: 24px;
-    color: #38bdf8; /* Azul claro brilhante */
+    color: #be185d; /* Rosa forte */
 }
 
 /* Campo onde a senha aparece */
@@ -34,58 +41,51 @@ input[type="text"] {
     padding: 12px;
     font-size: 18px;
     text-align: center;
-    border: 2px solid #334155;
+    border: 2px solid #f472b6;
     border-radius: 6px;
-    background-color: #0f172a;
-    color: #f8fafc;
+    background-color: #fdf2f8;
+    color: #831843;
     outline: none;
-    font-family: monospace; /* Fonte estilo código */
+    font-family: monospace;
 }
 
-/* NOVO: Estilização do bloco de caixas de seleção */
+/* Caixa das opções */
 .opcoes-caracteres {
-    background-color: #0f172a; /* Fundo escuro sutil para as opções */
+    background-color: #fce7f3;
     padding: 15px;
     border-radius: 8px;
-    border: 1px solid #334155;
+    border: 1px solid #f472b6;
 }
 
-/* NOVO: Estilização de cada linha de texto com checkbox */
+/* Texto das opções */
 .opcoes-caracteres label {
     font-size: 14px;
-    color: #cbd5e1;
+    color: #9d174d;
     cursor: pointer;
     display: flex;
     align-items: center;
 }
 
-/* NOVO: Estilização do quadradinho do checkbox */
+/* Checkbox */
 .opcoes-caracteres input[type="checkbox"] {
     cursor: pointer;
-    accent-color: #38bdf8; /* Deixa o "check" com o mesmo azul claro do título */
+    accent-color: #ec4899;
     width: 16px;
     height: 16px;
     margin-right: 8px;
 }
 
-/* Área dos controles de tamanho */
-.controles {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
+/* Número da senha */
 #numero-senha {
     font-size: 20px;
     font-weight: bold;
     min-width: 30px;
+    color: #831843;
 }
 
-/* Botões de + e - */
+/* Botões de ajuste + e - */
 .btn-ajuste {
-    background-color: #334155;
+    background-color: #ec4899;
     color: white;
     border: none;
     width: 35px;
@@ -97,14 +97,14 @@ input[type="text"] {
 }
 
 .btn-ajuste:hover {
-    background-color: #475569;
+    background-color: #db2777;
 }
 
-/* Botão principal de Gerar Senha */
+/* Botão principal Gerar Senha */
 .btn-gerar {
     width: 100%;
     padding: 12px;
-    background-color: #0284c7; /* Azul destaque */
+    background-color: #ec4899;
     color: white;
     border: none;
     border-radius: 6px;
@@ -115,5 +115,45 @@ input[type="text"] {
 }
 
 .btn-gerar:hover {
-    background-color: #0369a1;
+    background-color: #be185d;
+}
+/* Campo de força da senha */
+.forca-senha {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.forca-senha p {
+    color: #831843;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Fundo da barra */
+.barra-forca {
+    width: 90%;
+    height: 12px;
+    margin: auto;
+    background-color: #fbcfe8;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Preenchimento da barra */
+.nivel-forca {
+    width: 0%;
+    height: 100%;
+    background-color: #ec4899;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Número da porcentagem */
+.porcentagem-forca {
+    display: block;
+    margin-top: 5px;
+    color: #831843;
+    font-weight: bold;
 }
